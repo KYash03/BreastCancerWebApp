@@ -139,7 +139,7 @@ st.title('Breast Cancer Prediction')
 
 st.write('Input feature values in the sidebar.')
 
-svc_pipeline = joblib.load('/Users/yashkumar/DATA301Labs/final_model.joblib')
+svc_pipeline = joblib.load('final_model.joblib')
 
 if (sum(data.values()) != 0):
     st.write('Prediction:')
@@ -151,7 +151,7 @@ if (sum(data.values()) != 0):
 st.markdown("""---""")
 
 st.write('The below heatmap shows the correlation between the features of a breast lump.')
-df = pd.read_csv('/Users/yashkumar/Library/CloudStorage/OneDrive-UBC/data.csv')
+df = pd.read_csv('data.csv')
 fig_2 = plt.figure(figsize=(14, 12))
 sns.heatmap(data=df.iloc[:, 2:-1].corr(), cmap='mako')
 st.pyplot(fig_2)
