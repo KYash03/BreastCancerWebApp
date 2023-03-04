@@ -154,8 +154,7 @@ if (sum(data.values()) != 0):
 st.markdown("""---""")
 
 st.write('The below heatmap shows the correlation between the features of a breast lump.')
-df = pd.read_csv(
-    '/Users/yashkumar/DATA301Project/project-group-group24/data/raw/data.csv')
+df = pd.read_csv('data.csv')
 fig_2 = plt.figure(figsize=(14, 12))
 sns.heatmap(data=df.iloc[:, 2:-1].corr(), cmap='mako')
 st.pyplot(fig_2)
