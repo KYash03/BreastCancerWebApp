@@ -142,7 +142,7 @@ st.title('Breast Cancer Prediction')
 st.write('Input feature values in the sidebar.')
 
 svc_pipeline = joblib.load(
-    '/Users/yashkumar/DATA301Project/project-group-group24/analysis/WebAppCode/final_model.joblib')
+    'final_model.joblib')
 
 if (sum(data.values()) != 0):
     st.write('Prediction:')
